@@ -1,0 +1,35 @@
+uuid: 33788070-de98-4f92-8c08-b75846693aff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.media_video_modal.field_image
+    - field.field.paragraph.media_video_modal.field_video
+    - paragraphs.paragraphs_type.media_video_modal
+  module:
+    - media_entity
+    - media_entity_image
+id: paragraph.media_video_modal.default
+targetEntityType: paragraph
+bundle: media_video_modal
+mode: default
+content:
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: media_image
+    region: content
+  field_video:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: media_thumbnail
+    region: content
+hidden: {  }

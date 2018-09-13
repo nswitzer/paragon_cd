@@ -1,0 +1,28 @@
+uuid: 6049a393-a15e-4630-84bb-7abc55e0aab8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.link_default.field_link
+    - paragraphs.paragraphs_type.link_default
+  module:
+    - link
+id: paragraph.link_default.preview
+targetEntityType: paragraph
+bundle: link_default
+mode: preview
+content:
+  field_link:
+    weight: 0
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

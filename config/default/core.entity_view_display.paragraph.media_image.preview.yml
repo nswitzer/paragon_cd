@@ -1,0 +1,26 @@
+uuid: 7f35f415-8381-415d-83c4-fd56b953b214
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.media_image.field_image
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.media_image
+  module:
+    - media_entity
+id: paragraph.media_image.preview
+targetEntityType: paragraph
+bundle: media_image
+mode: preview
+content:
+  field_image:
+    weight: 0
+    label: above
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    third_party_settings: {  }
+    type: media_thumbnail
+    region: content
+hidden: {  }

@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Contains themekit_dev.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function themekit_dev_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the themekit_dev module.
+    case 'help.page.themekit_dev':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Configures libraries for local development.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_library_info_alter().
+ */
+function themekit_dev_library_info_alter(&$libraries, $extension) {
+  if (!preg_match('/^.+\.drupalvm$/', $GLOBALS['base_url'])) return;
+  if ($extension == 'themekit'
+    && isset($libraries['themekit'])
+    && isset($libraries['themekit']['css'])
+    && isset($libraries['themekit']['css']['theme']['dist/themekit.css'])
+  ) {
+    $libraries['themekit']['css']['theme']['dist/themekit.css']['preprocess'] = false;
+  }
+}

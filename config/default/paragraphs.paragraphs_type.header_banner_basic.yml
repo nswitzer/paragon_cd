@@ -1,0 +1,9 @@
+uuid: 959cc431-e9e3-42dd-beb3-0602e7e42e8f
+langcode: en
+status: true
+dependencies: {  }
+id: header_banner_basic
+label: 'Header Banner - Basic'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

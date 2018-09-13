@@ -1,0 +1,19 @@
+uuid: 24cefce8-c296-4985-ab3c-963598cd3690
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_video_source
+    - media_entity.bundle.video
+id: media.video.field_video_source
+field_name: field_video_source
+entity_type: media
+bundle: video
+label: 'Video Source'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

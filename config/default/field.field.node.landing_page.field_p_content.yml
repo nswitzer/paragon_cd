@@ -1,0 +1,54 @@
+uuid: 0934d996-1075-41f6-b8dc-5c3e5626ed7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_p_content
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.compound_media_bar
+    - paragraphs.paragraphs_type.simple_content
+  module:
+    - entity_reference_revisions
+id: node.landing_page.field_p_content
+field_name: field_p_content
+entity_type: node
+bundle: landing_page
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      simple_content: simple_content
+      compound_media_bar: compound_media_bar
+    target_bundles_drag_drop:
+      simple_content:
+        enabled: true
+        weight: -17
+      compound_media_bar:
+        enabled: true
+        weight: -16
+      link_default:
+        weight: -15
+        enabled: false
+      link_file:
+        weight: -14
+        enabled: false
+      media_image:
+        weight: -13
+        enabled: false
+      media_svg:
+        weight: -12
+        enabled: false
+      media_video:
+        weight: -11
+        enabled: false
+      media_video_modal:
+        weight: -10
+        enabled: false
+field_type: entity_reference_revisions

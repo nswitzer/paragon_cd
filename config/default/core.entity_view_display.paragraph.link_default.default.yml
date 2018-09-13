@@ -1,0 +1,27 @@
+uuid: 86d56b15-5b04-4091-9f7c-fb5880a17b09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.link_default.field_link
+    - paragraphs.paragraphs_type.link_default
+  module:
+    - link
+id: paragraph.link_default.default
+targetEntityType: paragraph
+bundle: link_default
+mode: default
+content:
+  field_link:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

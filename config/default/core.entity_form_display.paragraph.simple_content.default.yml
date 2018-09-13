@@ -1,0 +1,49 @@
+uuid: 6722abe2-cb80-4b48-8c1a-07f6d5a5c0c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.simple_content.field_description
+    - field.field.paragraph.simple_content.field_heading
+    - field.field.paragraph.simple_content.field_p_link
+    - paragraphs.paragraphs_type.simple_content
+  module:
+    - paragraphs
+    - text
+id: paragraph.simple_content.default
+targetEntityType: paragraph
+bundle: simple_content
+mode: default
+content:
+  field_description:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_p_link:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Link
+      title_plural: Links
+      edit_mode: preview
+      add_mode: select
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

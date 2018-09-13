@@ -1,0 +1,23 @@
+uuid: 50a0c96d-8b89-420a-b1fc-89a25d7361b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_position
+    - paragraphs.paragraphs_type.compound_media_bar
+  module:
+    - options
+id: paragraph.compound_media_bar.field_media_position
+field_name: field_media_position
+entity_type: paragraph
+bundle: compound_media_bar
+label: 'Media Position'
+description: 'Set the position of the media item. This will control whether the media item is on the left or right at full width.'
+required: true
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

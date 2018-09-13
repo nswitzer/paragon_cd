@@ -1,0 +1,52 @@
+uuid: 9bbc2c3f-d76d-473e-b661-0c831a4859d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_p_content_item
+    - paragraphs.paragraphs_type.compound_media_bar
+    - paragraphs.paragraphs_type.simple_content
+  module:
+    - entity_reference_revisions
+id: paragraph.compound_media_bar.field_p_content_item
+field_name: field_p_content_item
+entity_type: paragraph
+bundle: compound_media_bar
+label: 'Content Item'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      simple_content: simple_content
+    target_bundles_drag_drop:
+      compound_media_bar:
+        weight: 9
+        enabled: false
+      link_default:
+        weight: 10
+        enabled: false
+      link_file:
+        weight: 11
+        enabled: false
+      media_image:
+        weight: 12
+        enabled: false
+      media_svg:
+        weight: 13
+        enabled: false
+      media_video:
+        weight: 14
+        enabled: false
+      media_video_modal:
+        weight: 15
+        enabled: false
+      simple_content:
+        enabled: true
+        weight: 16
+field_type: entity_reference_revisions

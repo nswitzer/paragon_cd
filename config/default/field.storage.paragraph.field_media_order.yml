@@ -1,0 +1,27 @@
+uuid: 552e2220-2ceb-4872-8e4d-a7c72ba2a068
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_media_order
+field_name: field_media_order
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: first
+      label: First
+    -
+      value: second
+      label: Second
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

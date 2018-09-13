@@ -1,0 +1,48 @@
+uuid: dc72f538-eb94-49dc-bc7a-abc56b8533b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.video
+    - field.field.paragraph.media_video_modal.field_image
+    - field.field.paragraph.media_video_modal.field_video
+    - paragraphs.paragraphs_type.media_video_modal
+  module:
+    - entity_browser
+id: paragraph.media_video_modal.default
+targetEntityType: paragraph
+bundle: media_video_modal
+mode: default
+content:
+  field_image:
+    weight: 1
+    settings:
+      entity_browser: image
+      field_widget_display: rendered_entity
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: form_preview
+      field_widget_edit: false
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+  field_video:
+    weight: 0
+    settings:
+      entity_browser: video
+      field_widget_display: rendered_entity
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: form_preview
+      field_widget_edit: false
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

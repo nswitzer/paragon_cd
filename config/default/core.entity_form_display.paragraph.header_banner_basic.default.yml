@@ -1,0 +1,49 @@
+uuid: f38691a6-ddc2-48ef-bdf0-5ea98ea595bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.header_banner_basic.field_alt_title
+    - field.field.paragraph.header_banner_basic.field_description
+    - field.field.paragraph.header_banner_basic.field_p_link
+    - paragraphs.paragraphs_type.header_banner_basic
+  module:
+    - paragraphs
+    - text
+id: paragraph.header_banner_basic.default
+targetEntityType: paragraph
+bundle: header_banner_basic
+mode: default
+content:
+  field_alt_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_description:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_p_link:
+    weight: 2
+    settings:
+      title: Link
+      title_plural: Links
+      edit_mode: preview
+      add_mode: select
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,23 @@
+uuid: 37060ca6-af26-4c2b-884d-7070e375ac43
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.media_svg.field_svg
+    - paragraphs.paragraphs_type.media_svg
+id: paragraph.media_svg.preview
+targetEntityType: paragraph
+bundle: media_svg
+mode: preview
+content:
+  field_svg:
+    weight: 0
+    label: above
+    settings:
+      view_mode: form_preview
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

@@ -1,0 +1,19 @@
+uuid: 279c2ec6-a2a4-4d3f-9ab3-f67558d12b61
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_meta_summary
+field_name: field_meta_summary
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

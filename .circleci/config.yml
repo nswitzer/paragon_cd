@@ -1,0 +1,74 @@
+# PHP CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-php/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/php:7.1.21-apache-node-browsers
+
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/mysql:9.4
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - run: sudo apt-get install -y libpng-dev
+      - run: sudo docker-php-ext-install gd
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "composer.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run: composer install -n --prefer-dist
+
+      - save_cache:
+          paths:
+            - ./vendor
+          key: v1-dependencies-{{ checksum "composer.json" }}
+
+      - run:
+          name: Build frontend artifacts
+          command: cd docroot/themes/custom/themekit && npm install && npm run build
+
+      - run:
+          name: Configure git user email
+          command: git config --global user.email "circle@test.com"
+      - run:
+          name: Configure git user name
+          command: git config --global user.name "circle_user"
+      - run:
+          name: Avoid hosts unknown for Acquia
+          command: echo -e "Host svn-3239.devcloud.hosting.acquia.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+      - run:
+          name: Add Artifact repo as new remote
+          command: git remote add artifact testartifact@svn-3239.devcloud.hosting.acquia.com:testartifact.git
+      - run:
+          name: Fetch artifact repo
+          command: git fetch artifact
+      - run:
+          name: Checkout build branch
+          command: git checkout --track -b build-master artifact/build-master
+      - run:
+          name: Update .gitignore for artifact repo push
+          command: "sed -i '1,/######## ARTIFACT IGNORE ABOVE ########/d' .gitignore"
+      - run:
+          name: Remove .git directories from artifact directories
+          command: find ./* -type d | grep .git | xargs rm -rf
+      - run:
+          name: Add new files to git
+          command: git add .
+      - run:
+          name: Commit built assets to artifact repo
+          command: git commit -am "Built assets."
+      - run:
+          name: Push updates to artifact repo
+          command: git push artifact build-master -f --tags

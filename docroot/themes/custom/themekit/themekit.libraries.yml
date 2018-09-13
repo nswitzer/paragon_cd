@@ -1,0 +1,46 @@
+# A base build of modernizr is provided, you may remove it or add your own
+base:
+  version: VERSION
+  header: true
+  js:
+    js/vendor/modernizr-custom.js: {}
+
+# google fonts
+#fonts:
+#  css:
+#    theme:
+#      '//fonts.googleapis.com/css?family=Lato:400,700,400italic': { type: external, minified: true }
+
+# typekit
+#typekit:
+#  version: 1.x
+#  header: true
+#  js:
+#    //use.typekit.net/ydi4zcl.js: { every_page: true }
+#    js/vendor/typekit.js: { every_page: true }
+
+themekit:
+  version: VERSION
+  js:
+    js/vendor/nodeListForEachPolyfill.js: {}
+#    TODO: Uncomment this once you have more than one bundle.
+#    dist/commons.js: {}
+    dist/themekit.js: {}
+  css:
+    theme:
+      dist/style.css: {}
+  dependencies:
+    - core/jquery
+    - themekit/babel-polyfill
+
+babel-polyfill:
+  version: 1.x
+  js:
+    dist/polyfill.js: {}
+
+# Define additional sub-apps here. Be sure to first add it
+# as an entry point in webpack.config.js
+#myApp:
+#  version: 1.x
+#  js:
+#    js/dist/myApp.js: {}

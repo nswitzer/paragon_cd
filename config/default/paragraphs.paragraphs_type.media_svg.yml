@@ -1,0 +1,9 @@
+uuid: d59c0336-4801-4c40-b19f-881a5e58e67c
+langcode: en
+status: true
+dependencies: {  }
+id: media_svg
+label: 'Media - SVG'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

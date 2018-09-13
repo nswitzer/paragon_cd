@@ -1,0 +1,9 @@
+uuid: 1a9d0761-22d7-4956-ac97-b22796f90b82
+langcode: en
+status: true
+dependencies: {  }
+id: compound_media_bar
+label: 'Compound - Media Bar'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

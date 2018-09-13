@@ -1,0 +1,9 @@
+uuid: e6cf578b-3432-4d2d-a71a-9439e070557d
+langcode: en
+status: true
+dependencies: {  }
+id: media_video_modal
+label: 'Media - Video Modal'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

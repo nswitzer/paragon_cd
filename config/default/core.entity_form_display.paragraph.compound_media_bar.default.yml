@@ -1,0 +1,92 @@
+uuid: d013a3f7-e85a-4f93-9641-6b109dbe3e4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.compound_media_bar.field_description
+    - field.field.paragraph.compound_media_bar.field_heading
+    - field.field.paragraph.compound_media_bar.field_media_order
+    - field.field.paragraph.compound_media_bar.field_media_position
+    - field.field.paragraph.compound_media_bar.field_p_content_item
+    - field.field.paragraph.compound_media_bar.field_p_media_item
+    - paragraphs.paragraphs_type.compound_media_bar
+  module:
+    - field_group
+    - paragraphs
+    - text
+third_party_settings:
+  field_group:
+    group_settings:
+      children:
+        - field_media_order
+        - field_media_position
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Settings
+id: paragraph.compound_media_bar.default
+targetEntityType: paragraph
+bundle: compound_media_bar
+mode: default
+content:
+  field_description:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_media_order:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_media_position:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_p_content_item:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: 'Content Item'
+      title_plural: 'Content Items'
+      edit_mode: preview
+      add_mode: select
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_p_media_item:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: 'Media Item'
+      title_plural: 'Media Items'
+      edit_mode: preview
+      add_mode: select
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

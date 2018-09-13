@@ -1,0 +1,5 @@
+name: 'themekit_dev'
+type: module
+description: 'Configures libraries for local development.'
+core: 8.x
+package: 'Custom'

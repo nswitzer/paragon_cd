@@ -1,0 +1,43 @@
+uuid: ad31577a-1b43-4e36-8504-4dff50da1421
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.simple_content.field_description
+    - field.field.paragraph.simple_content.field_heading
+    - field.field.paragraph.simple_content.field_p_link
+    - paragraphs.paragraphs_type.simple_content
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.simple_content.preview
+targetEntityType: paragraph
+bundle: simple_content
+mode: preview
+content:
+  field_description:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_heading:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_p_link:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: preview
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }
