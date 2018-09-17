@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bbf4ee249ade89c3fcfd73986f95cb51",
+    "content-hash": "f324c304e2921663391761def28c443b",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3625,8 +3625,7 @@
                 "source": "http://cgit.drupalcode.org/devel",
                 "issues": "http://drupal.org/project/devel",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
-            },
-            "time": "2018-08-17T11:57:16+00:00"
+            }
         },
         {
             "name": "drupal/embed",
@@ -4609,8 +4608,7 @@
             "homepage": "https://www.drupal.org/project/link_css",
             "support": {
                 "source": "http://cgit.drupalcode.org/link_css"
-            },
-            "time": "2016-11-08T03:19:30+00:00"
+            }
         },
         {
             "name": "drupal/linkit",
@@ -5121,7 +5119,7 @@
                 },
                 "drupal": {
                     "version": "8.x-2.0-alpha7",
-                    "datestamp": "1536065580",
+                    "datestamp": "1536739683",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -5133,6 +5131,10 @@
                 "GPL-2.0+"
             ],
             "authors": [
+                {
+                    "name": "Fabianx",
+                    "homepage": "https://www.drupal.org/user/693738"
+                },
                 {
                     "name": "Jeremy",
                     "homepage": "https://www.drupal.org/user/409"
@@ -5950,6 +5952,65 @@
             "homepage": "https://www.drupal.org/project/redirect",
             "support": {
                 "source": "http://cgit.drupalcode.org/redirect"
+            }
+        },
+        {
+            "name": "drupal/redis",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/redis",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/redis-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "98cf460db5c9aaacf3d5c02ac51e0c9e8e85edbb"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "suggest": {
+                "predis/predis": "^1.1.1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1527699484",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\redis\\": "src"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "pounard",
+                    "homepage": "https://www.drupal.org/user/240164"
+                }
+            ],
+            "description": "Provide a module placeholder, for using as dependency for module that needs Redis.",
+            "homepage": "https://www.drupal.org/project/redis",
+            "support": {
+                "source": "http://cgit.drupalcode.org/redis"
             }
         },
         {

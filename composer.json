@@ -89,7 +89,8 @@
     "symfony/css-selector": "~3.3",
     "drupal/acquia_purge": "1.0.0-beta3",
     "drupal/http_cache_control": "^1.0@alpha",
-    "drupal/link_css": "1.x-dev"
+    "drupal/link_css": "1.x-dev",
+    "drupal/redis": "^1.0"
   },
   "conflict": {
       "drupal/drupal": "*"
