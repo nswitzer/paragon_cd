@@ -45,7 +45,7 @@ jobs:
 
       - run:
           name: Build frontend artifacts
-          command: cd docroot/themes/custom/themekit && nvm use && npm install && npm run build
+          command: cd docroot/themes/custom/themekit && npm install && npm run build
 
       - run:
           name: Debug - git diff package-lock file
