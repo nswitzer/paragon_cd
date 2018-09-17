@@ -36,8 +36,16 @@ jobs:
           key: v1-dependencies-{{ checksum "composer.json" }}
 
       - run:
+          name: Install nvm
+          command: curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+
+      - run:
           name: Build frontend artifacts
-          command: cd docroot/themes/custom/themekit && npm install && npm run build
+          command: cd docroot/themes/custom/themekit && nvm use && npm install && npm run build
+
+      - run:
+          name: Debug - git diff package-lock file
+          command: git diff --exit-code docroot/themes/custom/themekit/package-lock.json
 
       - run:
           name: Configure git user email
