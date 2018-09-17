@@ -40,18 +40,6 @@ jobs:
           command: curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 
       - run:
-          name: Configure nvm
-          command: export NVM_DIR="$HOME/.nvm"
-
-      - run:
-          name: Configure nvm 2
-          command: [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-      - run:
-          name: Configure nvm 3
-          command: [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
-      - run:
           name: Source .bashrc
           command: source /home/circleci/.bashrc
 
