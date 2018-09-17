@@ -37,7 +37,7 @@ jobs:
 
       - run:
           name: Build frontend artifacts
-          command: cd docroot/themes/custom/themekit && npm install && npm run build
+          command: cd docroot/themes/custom/themekit && node --version && npm install && npm run build
       - run:
           name: Ignore https to http switches on circleci in package lock (not sure why this happens)
           command: git diff --exit-code docroot/themes/custom/themekit/package-lock.json || sed -i 's/http:/https:/g' docroot/themes/custom/themekit/package-lock.json
