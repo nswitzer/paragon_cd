@@ -8,4 +8,4 @@
 site="$1"
 target_env="$2"
 
-drush @$site.$target_env updatedb --yes --strict=0
+drush9 @$site.$target_env updatedb --yes --strict=0

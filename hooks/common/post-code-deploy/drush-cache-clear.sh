@@ -12,4 +12,4 @@ target_env=$2
 drush_alias=$site'.'$target_env
 
 # Execute a standard drush command.
-drush @$drush_alias cr
+drush9 @$drush_alias cr
