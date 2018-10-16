@@ -1,6 +1,6 @@
 <?php
 
-$acquia_site_name = 'testartifact';
+$acquia_site_name = 'paragoncd';
 if (file_exists('/var/www/site-php')) {
   require("/var/www/site-php/{$acquia_site_name}/{$acquia_site_name}-settings.inc");
 }

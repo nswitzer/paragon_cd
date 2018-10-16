@@ -59,10 +59,10 @@ jobs:
           command: git config --global user.name "circle_user"
       - run:
           name: Avoid hosts unknown for Acquia
-          command: echo -e "Host svn-3239.devcloud.hosting.acquia.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+          command: echo -e "Host svn-6689.devcloud.hosting.acquia.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
       - run:
           name: Add Artifact repo as new remote
-          command: git remote add artifact testartifact@svn-3239.devcloud.hosting.acquia.com:testartifact.git
+          command: git remote add artifact paragoncd@svn-6689.devcloud.hosting.acquia.com:paragoncd.git
       - run:
           name: Fetch artifact repo
           command: git fetch artifact
