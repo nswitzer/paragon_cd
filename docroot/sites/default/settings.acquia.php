@@ -53,6 +53,9 @@ $config['environment_indicator.indicator']['name'] = 'Acquia ' . $_ENV['AH_SITE_
 $settings['trusted_host_patterns'][] = 'paragondevansnwocpp3.devcloud.acquia-sites.com';
 $settings['trusted_host_patterns'][] = 'paragondevmsusi7dabk.devcloud.acquia-sites.com';
 $settings['trusted_host_patterns'][] = 'pargon.ac.e3develop.com';
+// Paragon CD dev environment
+$settings['trusted_host_patterns'][] = 'paragoncd7pnafpg68p.devcloud.acquia-sites.com';
+
 
 /**
  * Set default config_readonly status to TRUE on all Acquia environments.
