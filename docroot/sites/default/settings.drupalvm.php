@@ -157,6 +157,7 @@ $config['system.logging']['error_level'] = 'verbose';
 
 // Add drupalvm to trusted host patterns
 $settings['trusted_host_patterns'][] = '^.+\.drupalvm';
+$settings['trusted_host_patterns'][] = '^.+\.dvm';
 
 // Enable dev modules locally, commented out until config split is figured out
 //$config['config_split.config_split.config_dev']['status'] = TRUE;

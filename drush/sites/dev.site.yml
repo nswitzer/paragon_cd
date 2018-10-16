@@ -1,0 +1,15 @@
+dev:
+  host: paragoncd7pnafpg68p.ssh.devcloud.acquia-sites.com
+  options:
+    ac-env: dev
+    ac-realm: devcloud
+    ac-site: paragoncd
+  paths:
+    drush-script: drush9
+  root: /var/www/html/paragoncd.dev/docroot
+  uri: paragoncd7pnafpg68p.devcloud.acquia-sites.com
+  user: paragoncd.dev
+livedev:
+  options:
+    parent: '@paragoncd.dev'
+  root: /mnt/gfs/paragoncd.dev/livedev/docroot

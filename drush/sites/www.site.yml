@@ -1,0 +1,3 @@
+dev:
+  root: /var/www/pcd/docroot
+  uri: www.pcd.dvm
